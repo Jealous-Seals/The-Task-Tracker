@@ -1,4 +1,4 @@
-let Tasks = {}
+const Tasks = require("./Tasks")
 
 const saveDatabase = () => {
 	const stringifiedDatabase = JSON.stringify(Tasks)

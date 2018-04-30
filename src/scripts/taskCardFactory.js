@@ -10,17 +10,17 @@ const taskCardFactory = (taskID) => {
 	const description = componentFactory("p", Tasks[taskID].description, "taskDescription")
 	const dueDate = componentFactory("p", Tasks[taskID].dueDate, "taskDueDate")
 
-	htmlAppend(taskSection, title)
-	htmlAppend(taskSection, category)
-	htmlAppend(taskSection, description)
-	htmlAppend(taskSection, dueDate)
+	taskSection.appendChild(title)
+	taskSection.appendChild(category)
+	taskSection.appendChild(description)
+	taskSection.appendChild(dueDate)
 
 	if (Tasks[taskID].isOverdue === true) {
 		const overdue = componentFactory("p", "This task is overdue", "overdue")
-		htmlAppend(taskSection, overdue)
+		taskSection.appendChild(overdue)
 	}
 
-
+	return taskSection
 }
 
 module.exports = taskCardFactory
