@@ -1,4 +1,3 @@
-const htmlAppend = require("./htmlAppend")
 const componentFactory = require("./componentFactory")
 const Tasks = require("./databaseLoad")
 

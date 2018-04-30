@@ -1,7 +1,8 @@
-const Tasks = require("./Tasks")
 
-const saveDatabase = () => {
-	const stringifiedDatabase = JSON.stringify(Tasks)
+const saveDatabase = (database) => {
+	console.log(database)
+	const stringifiedDatabase = JSON.stringify(database)
+	console.log(stringifiedDatabase)
 	localStorage.setItem("Tasks", stringifiedDatabase)
 }
 
