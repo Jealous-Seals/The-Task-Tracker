@@ -5,4 +5,4 @@ const createArticle = (id, classes) => {
     return article
 }
 
-module.exports = createArcticle
+module.exports = createArticle
