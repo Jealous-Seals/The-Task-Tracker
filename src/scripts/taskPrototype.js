@@ -6,7 +6,7 @@ const Task = Object.create(null, {
         writable: true,
     },
     started: {
-        value: "generated date", //to be changed, value will come from timestamp function
+        value: new Date(), //to be changed, value will come from timestamp function
         enumerable: true
     },
     completed: {

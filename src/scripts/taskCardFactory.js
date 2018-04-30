@@ -1,6 +1,5 @@
-const htmlAppend = require("./htmlAppend")
 const componentFactory = require("./componentFactory")
-const Tasks = require("./databaseLoad")
+const Tasks = require("./Tasks")
 
 
 const taskCardFactory = (taskID) => {
