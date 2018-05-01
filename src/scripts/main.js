@@ -6,6 +6,5 @@ const createArticlePage = require("./archivePage")
 const saveDatabase = require("./databaseSave")
 
 
-// loadDatabase()
 createNewTask("title", "description", "s", "s", "c")
 console.log(Tasks)
