@@ -2,6 +2,7 @@
 const Tasks = require("./Tasks")
 const saveDatabase = require("./databaseSave")
 const overdue = require("./overdue")
+const archiveCardButton = require("./archiveCardButton")
 
 const handleDrop = (dropArea, draggedElement) => {
     const task = draggedElement.draggable.attr("id")
@@ -12,6 +13,10 @@ const handleDrop = (dropArea, draggedElement) => {
     if (status !== "toDo") {
         Tasks[task].status = status
         column.appendChild(card)
+        if (status === "done"){
+            const button = archiveCardButton(task, column)
+            card.appendChild(button)
+        }
         saveDatabase(Tasks)
     } else if (status === "toDo") {
         alert("STOP!!!!!")

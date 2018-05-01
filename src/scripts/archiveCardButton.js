@@ -6,7 +6,9 @@ const archiveCardButton = (task, parent) => {
 	button.textContent = "Archive Task"
 	button.addEventListener("click", () => {
 		Tasks[task].archived = true;
-		parent.lastChild.remove();
+		console.log(task)
+		const cardToDelete = document.querySelector(`#${task}`)
+		parent.removeChild(cardToDelete)
 	})
 	return button
 }
