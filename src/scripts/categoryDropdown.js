@@ -12,3 +12,5 @@ const buildOptions = () => {
 		categorySelect.appendChild(optionElement)
 	})
 }
+
+module.exports = buildOptions
