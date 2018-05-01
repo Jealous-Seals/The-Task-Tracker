@@ -17,9 +17,13 @@ const taskPageVariable = taskPage()
 domElement.appendChild(taskPageVariable)
 
 
-// // test tasks to be used to initialize test database, run code with these once and then comment out the function calls
-// createNewTask("Clean", "clean up house", "April 1, 2018", "toDo", "household")
-// createNewTask("laundry", "do laundry", "April 1, 2018", "doing", "household")
+//test file can be removed from final version
+const test = require("./test")
+
+
+// test tasks to be used to initialize test database, run code with these once and then comment out the function calls
+createNewTask("Clean", "clean up house", "April 1, 2018", "toDo", "household")
+createNewTask("laundry", "do laundry", "April 1, 2018", "doing", "household")
 
 dragging()
 console.log(Tasks)
