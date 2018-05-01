@@ -13,7 +13,7 @@ const activateTaskForm = () => {
         let title = document.getElementById("title").value
         let description = document.getElementById("description").value
         let dueDate = document.getElementById("dueDate").value
-        let category = document.getElementById("dropdown").value
+        let category = document.getElementById("categorySelect").value
         const newTask = createNewTask(title, description, dueDate, "toDo", category)
         domElement.appendChild(taskCardFactory(newTask))
     })
