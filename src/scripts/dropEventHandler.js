@@ -21,7 +21,6 @@ const handleDrop = (dropArea, draggedElement) => {
     } else if (status === "toDo") {
         alert("STOP!!!!!")
     }
-
 }
 
 module.exports = handleDrop

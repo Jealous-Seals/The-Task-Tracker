@@ -8,10 +8,17 @@ const checkIfOverdue = require("./overdue")
 const taskPage = require("./taskPage")
 const archivePage = require("./archivePage")
 const dragging = require("./drag")
+const categories = require("./categories")
+const newCateogry = require("./newCategory")
+const categoryDropdown = require("./categoryDropdown")
 
 const domElement = document.getElementById("parentElement")
 const taskPageVariable = taskPage()
 domElement.appendChild(taskPageVariable)
+
+
+//test file can be removed from final version
+const test = require("./test")
 
 
 // test tasks to be used to initialize test database, run code with these once and then comment out the function calls
