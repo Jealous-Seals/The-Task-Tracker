@@ -39,25 +39,29 @@ const createNewTask = (title, description, dueDate, status, category) => {
             value: category,
             enumerable: true
         },
-        archived: {
+        "archived": {
             value: false,
             writable: true,
         },
-        started: {
+        "started": {
             value: timestamp().toString(), //to be changed, value will come from timestamp function
             enumerable: true
         },
-        completed: {
+        "completed": {
             value: null,
             writable: true,
             enumerable: true
+        },
+        "overdue": {
+            value: false,
+            enumerable: true,
+            writable: true
         }
     })
     //stores the next unique id in a variable
-    let taskUID = uuidMaker.next().value
+    let taskUID = "_"+uuidMaker.next().value
 
     //creates a key in the master database object using the unique id as the key name
-    console.log(Tasks)
     Tasks[taskUID] = newTask
     saveDatabase(Tasks)
 }
