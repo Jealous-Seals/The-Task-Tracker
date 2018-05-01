@@ -1,6 +1,6 @@
 //function to return timestamps
 const timestamp = () => {
-    return new Date()
+	return new Date()
 }
 
 module.exports = timestamp
