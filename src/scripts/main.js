@@ -7,7 +7,6 @@ const saveDatabase = require("./databaseSave")
 const checkIfOverdue = require("./overdue")
 
 
-// loadDatabase()
 createNewTask("title", "description", "s", "s", "c")
 console.log(Tasks)
 checkIfOverdue(Tasks.1)
