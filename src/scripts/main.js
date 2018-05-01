@@ -19,3 +19,4 @@ domElement.appendChild(taskPageVariable)
 // createNewTask("laundry", "do laundry", "April 1, 2018", "doing", "household")
 
 dragging()
+console.log(Tasks)
