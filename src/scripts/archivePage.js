@@ -1,7 +1,12 @@
-const createArticle = require("./createArticle.js")
+const createArticle = require("./createArticle")
+const Tasks = require("./Tasks")
+const filter = require("./filter")
+const taskCardFactory = require("./taskCardFactory")
 
 const createArchivePage = () => {
-    return createArticle("archive", "archive")
+    archiveArticle = createArticle("archive", "archive")
+    filter("archive", archiveArticle)
+    return archiveArticle
 }
 
 module.exports = createArchivePage
