@@ -8,9 +8,11 @@ const checkIfOverdue = require("./overdue")
 const taskPage = require("./taskPage")
 const archivePage = require("./archivePage")
 const dragging = require("./drag")
+const createTaskModal = require("./newTaskModal")
 const categories = require("./categories")
 const newCateogry = require("./newCategory")
 const categoryDropdown = require("./categoryDropdown")
+
 
 const domElement = document.getElementById("parentElement")
 const taskPageVariable = taskPage()
@@ -25,6 +27,6 @@ const test = require("./test")
 createNewTask("Clean", "clean up house", "April 1, 2018", "toDo", "household")
 createNewTask("laundry", "do laundry", "April 1, 2018", "doing", "household")
 
+createTaskModal()
 dragging()
-console.log(Tasks)
 
