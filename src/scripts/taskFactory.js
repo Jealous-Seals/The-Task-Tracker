@@ -1,8 +1,8 @@
 //app to create tasks and add them to the tasks database
 
 const Tasks = require("./Tasks")
-const task = require("./taskPrototype")
 const saveDatabase = require("./databaseSave")
+const timestamp = require("./timestamp")
 
 const idGenerator = function* (startFrom = 0) {
     let newId = 1
@@ -18,7 +18,7 @@ const uuidMaker = idGenerator()
 
 //factory function to create new tasks when called
 const createNewTask = (title, description, dueDate, status, category) => {
-    const newTask = Object.create(task, {
+    const newTask = Object.create(null, {
         "title": {
             value: title,
             enumerable: true
@@ -37,6 +37,19 @@ const createNewTask = (title, description, dueDate, status, category) => {
         },
         "category": {
             value: category,
+            enumerable: true
+        },
+        archived: {
+            value: false,
+            writable: true,
+        },
+        started: {
+            value: timestamp().toString(), //to be changed, value will come from timestamp function
+            enumerable: true
+        },
+        completed: {
+            value: null,
+            writable: true,
             enumerable: true
         }
     })
