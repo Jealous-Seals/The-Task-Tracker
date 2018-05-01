@@ -4,7 +4,7 @@ const categories = require("./categories")
 
 const activateCategoryForm = () => {
     $("#btn--newCategory").click(() => {
-        categories.push($("#category").val())
+        createNewCategory($("#category").val())
     })
 }
 
