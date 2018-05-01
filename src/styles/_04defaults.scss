@@ -151,3 +151,12 @@ img{
 :empty { 
     background-color: $test-color;
 }
+
+.column {
+    height: 100%;
+    padding-bottom: 5em;
+}
+
+.taskCard {
+    border: 1px solid $test-color;
+}

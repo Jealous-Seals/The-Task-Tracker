@@ -7,16 +7,15 @@ const saveDatabase = require("./databaseSave")
 const checkIfOverdue = require("./overdue")
 const taskPage = require("./taskPage")
 const archivePage = require("./archivePage")
-
-
-createNewTask("title", "description", "April 1, 2018", "s", "c")
-checkIfOverdue(Tasks._1)
-
+const dragging = require("./drag")
 
 const domElement = document.getElementById("parentElement")
-createNewTask("title", "description", "s", "doing", "c")
-
 const taskPageVariable = taskPage()
 domElement.appendChild(taskPageVariable)
 
-createNewTask("title", "description", "s", "s", "c")
+
+// test tasks to be used to initialize test database, run code with these once and then comment out the function calls
+// createNewTask("Clean", "clean up house", "April 1, 2018", "toDo", "household")
+// createNewTask("laundry", "do laundry", "April 1, 2018", "doing", "household")
+
+dragging()

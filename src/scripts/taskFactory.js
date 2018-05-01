@@ -33,7 +33,8 @@ const createNewTask = (title, description, dueDate, status, category) => {
         },
         "status": {
             value: status,
-            enumerable: true
+            enumerable: true,
+            writable: true
         },
         "category": {
             value: category,
