@@ -14,12 +14,6 @@ const filter = (currentStatus, parent) => {
 			parent.appendChild(card)
 		}
 	}
-	for (let item in Tasks) {
-		const card = taskCardFactory(item)
-		if (Tasks[item].status === currentStatus) {
-			parent.appendChild(card)
-		}
-	}
 }
 
 module.exports = filter
