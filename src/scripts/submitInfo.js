@@ -7,7 +7,7 @@ const taskCardFactory = require("./taskCardFactory")
 
 const activateTaskForm = () => {
 
-    submitButton = document.getElementById("btn--newTask")
+    const submitButton = document.getElementById("btn--newTask")
     submitButton.addEventListener("click", () => {
         const domElement = document.getElementById("toDo")
         let title = document.getElementById("title").value
