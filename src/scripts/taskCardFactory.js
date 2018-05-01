@@ -9,6 +9,8 @@ const taskCardFactory = (taskID) => {
 	const description = componentFactory("p", Tasks[taskID].description, "taskDescription")
 	const dueDate = componentFactory("p", Tasks[taskID].dueDate, "taskDueDate")
 
+	taskSection.setAttribute("id", taskID)
+
 	taskSection.appendChild(title)
 	taskSection.appendChild(category)
 	taskSection.appendChild(description)

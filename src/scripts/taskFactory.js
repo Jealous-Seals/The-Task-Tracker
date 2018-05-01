@@ -18,6 +18,7 @@ const uuidMaker = idGenerator()
 
 //factory function to create new tasks when called
 const createNewTask = (title, description, dueDate, status, category) => {
+
 	const newTask = Object.create(null, {
 		"title": {
 			value: title,
@@ -61,6 +62,7 @@ const createNewTask = (title, description, dueDate, status, category) => {
 	})
 	//stores the next unique id in a variable
 	let taskUID = "_" + uuidMaker.next().value
+
 
 	//creates a key in the master database object using the unique id as the key name
 	Tasks[taskUID] = newTask
