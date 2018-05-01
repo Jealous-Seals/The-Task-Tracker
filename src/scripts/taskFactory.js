@@ -67,6 +67,7 @@ const createNewTask = (title, description, dueDate, status, category) => {
 	//creates a key in the master database object using the unique id as the key name
 	Tasks[taskUID] = newTask
 	saveDatabase(Tasks)
+	return taskUID
 }
 
 module.exports = createNewTask
