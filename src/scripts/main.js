@@ -14,6 +14,7 @@ const newCateogry = require("./newCategory")
 const categoryDropdown = require("./categoryDropdown")
 const activateTaskForm = require("./submitInfo")
 const buildOptions = require("./categoryDropdown")
+const activateCategoriesForm = require("./createCategoryForm")
 
 
 const domElement = document.getElementById("parentElement")
@@ -30,6 +31,7 @@ createNewTask("Clean", "clean up house", "April 1, 2018", "toDo", "household")
 createNewTask("laundry", "do laundry", "April 1, 2018", "doing", "household")
 
 createTaskModal()
+activateCategoriesForm()
 dragging()
 activateTaskForm()
 buildOptions()
