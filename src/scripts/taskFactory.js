@@ -42,6 +42,7 @@ const createNewTask = (title, description, dueDate, status, category) => {
         "archived": {
             value: false,
             writable: true,
+            enumerable: true
         },
         "started": {
             value: timestamp().toString(), //to be changed, value will come from timestamp function

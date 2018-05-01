@@ -19,4 +19,6 @@ createNewTask("title", "description", "s", "doing", "c")
 const taskPageVariable = taskPage()
 domElement.appendChild(taskPageVariable)
 
-createNewTask("title", "description", "s", "s", "c")
+createNewTask("title", "description", "s", "done", "c")
+
+console.log(Tasks)

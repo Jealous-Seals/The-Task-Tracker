@@ -1,15 +1,17 @@
 const Tasks = require("./Tasks")
 const taskCardFactory = require("./taskCardFactory")
+const archiveCardButton = require("./archiveCardButton")
 
 const filter = (currentStatus, parent) => {
-    console.log(Tasks)
     for (let item in Tasks) {
         const card = taskCardFactory(item)
-        console.log(card)
-        console.log(parent)
-        if (Tasks[item].status === currentStatus) {
+        if (Tasks[item].status === currentStatus  && Tasks[item].archived === false) {
+            if(Tasks[item].status === "done"){
+                card.appendChild(archiveCardButton(item, parent))
+            }
             parent.appendChild(card)
-            console.log(parent)
+        } else if(currentStatus === "archive" && Task[item].archived === true) {
+            parent.appendChild(card)
         }
     }
 }
