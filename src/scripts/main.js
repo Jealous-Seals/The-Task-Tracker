@@ -6,8 +6,4 @@ const createTaskPage = require("./taskPage")
 const createArticlePage = require("./archivePage")
 const saveDatabase = require("./databaseSave")
 const newCategory = require("./newCategory")
-
-
-// loadDatabase()
-createNewTask("title", "description", "s", "s", "c")
-console.log(Tasks)
+const buildOptions = require("./categoryDropDown")

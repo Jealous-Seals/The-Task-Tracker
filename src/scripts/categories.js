@@ -1,3 +1,3 @@
-let categories = ["test"]
+let categories = ["work", "personal"]
 
 module.exports = categories

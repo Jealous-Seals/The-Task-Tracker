@@ -1,11 +1,14 @@
 const componentFactory = require("./componentFactory")
 const Tasks = require("./Tasks")
+const buildOptions = require("./categoryDropDown")
 
 
 const taskCardFactory = (taskID) => {
 	const taskSection = componentFactory("section", "", "taskCard")
 	const title = componentFactory("h3", Tasks[taskID].title, "taskTitle")
-	const category = componentFactory("p", Tasks[taskID].category, "taskCategory")
+	const category = document.createElement("select")
+	category.setAttribute("id", "categorySelect")
+	buildOptions()
 	const description = componentFactory("p", Tasks[taskID].description, "taskDescription")
 	const dueDate = componentFactory("p", Tasks[taskID].dueDate, "taskDueDate")
 

@@ -44,7 +44,6 @@ const createNewTask = (title, description, dueDate, status, category) => {
 	let taskUID = uuidMaker.next().value
 
 	//creates a key in the master database object using the unique id as the key name
-	console.log(Tasks)
 	Tasks[taskUID] = newTask
 	saveDatabase(Tasks)
 }
