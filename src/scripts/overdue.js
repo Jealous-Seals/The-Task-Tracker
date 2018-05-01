@@ -4,9 +4,16 @@
 const Task = require("./Tasks")
 
 const checkIfOverdue = (task) => {
-    const dateStarted = Date.parse(task.dateStarted)
+    const dueDate = Date.parse(task.dueDate)
     const dateNow = Date.parse(new Date().toString())
-    console.log(dateStarted,dateNow)
+    console.log(dueDate,dateNow)
+    if (dateNow - dueDate > 0) {
+        console.log("task is overdue")
+        task.overdue = true
+    } else if (dateNow - dueDate < 0) {
+        console.log("task is not overdue")
+        task.overdue = false
+    }
 }
 
 module.exports = checkIfOverdue

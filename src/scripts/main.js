@@ -7,6 +7,5 @@ const saveDatabase = require("./databaseSave")
 const checkIfOverdue = require("./overdue")
 
 
-createNewTask("title", "description", "s", "s", "c")
-console.log(Tasks)
-checkIfOverdue(Tasks.1)
+createNewTask("title", "description", "April 1, 2018", "s", "c")
+checkIfOverdue(Tasks._1)
