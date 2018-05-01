@@ -7,6 +7,7 @@ const saveDatabase = require("./databaseSave")
 const taskPage = require("./taskPage")
 const archivePage = require("./archivePage")
 
+
 //targeted dom components
 const domElement = document.getElementById("parentElement")
 // loadDatabase()
@@ -15,3 +16,7 @@ console.log(Tasks)
 
 const taskPageVariable = taskPage()
 domElement.appendChild(taskPageVariable)
+
+createNewTask("title", "description", "s", "s", "c")
+console.log(Tasks)
+
