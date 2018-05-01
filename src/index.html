@@ -38,16 +38,16 @@
             <input type="text" id="title" placeholder="Task">
             <input type="text" id="description" placeholder="Description">
             <input type="text" id="dueDate" placeholder="Due Date">
-            <select>
-              <option value="" disabled selected>Category</option>
-              <option value="household">Household</option>
-              <option value="work">Work</option>
+            <select id="categorySelect">
+              <option id="defaultOption" value="" disabled selected>Category</option>
+              <!-- <option value="household">Household</option>
+              <option value="work">Work</option> -->
             </select>
           </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" id="btn--newTask">Create New Task</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" id="btn--newTask">Create New Task</button>
         </div>
       </div>
     </div>
