@@ -355,6 +355,12 @@ img {
 #archive .hidden--button {
   display: none; }
 
+#done .overdue {
+  display: none; }
+
+.overdue {
+  color: red; }
+
 /*
 
 ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄  
