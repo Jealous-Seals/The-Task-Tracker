@@ -3,17 +3,18 @@
 const Tasks = require("./Tasks")
 const saveDatabase = require("./databaseSave")
 const timestamp = require("./timestamp")
+const IDCounter = require("./IDObject")
 
-const idGenerator = function* (startFrom = 0) {
-	let newId = 1
+// const idGenerator = function* (startFrom = 0) {
+// 	let newId = 1
 
-	while (true) {
-		yield startFrom + newId
-		newId++
-	}
-}
+// 	while (true) {
+// 		yield startFrom + newId
+// 		newId++
+// 	}
+// }
 
-const uuidMaker = idGenerator()
+// const uuidMaker = idGenerator()
 
 
 //factory function to create new tasks when called
@@ -60,8 +61,11 @@ const createNewTask = (title, description, dueDate, status, category) => {
 			writable: true
 		}
 	})
-	//stores the next unique id in a variable
-	let taskUID = "_" + uuidMaker.next().value
+    //stores the next unique id in a variable
+    IDCounter.loadID()
+    let taskUID = "_" + IDCounter.currentID
+    IDCounter.currentID++
+    IDCounter.saveID()
 
 
 	//creates a key in the master database object using the unique id as the key name
