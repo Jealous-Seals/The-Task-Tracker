@@ -7,6 +7,7 @@ const activateCategoryForm = () => {
     $("#btn--newCategory").click(() => {
         createNewCategory($("#category").val())
         buildOptions()
+        $("#category").val("")
     })
 }
 
