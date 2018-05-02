@@ -1,6 +1,6 @@
 const categories = Object.create({}, {
     categoryOptions: {
-        value: ["work", "personal"],
+        value: ["Work", "Personal"],
         writable: true,
         enumerable: true
     },

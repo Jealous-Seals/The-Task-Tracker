@@ -26,6 +26,7 @@ domElement.appendChild(taskPageVariable)
 const test = require("./test")
 const chartByStatusData = require("./chartByStatusData")
 const chartByStatus = require("./chartByStatus")
+const chartByCategoryData = require("./chartByCategoryData")
 
 
 createTaskModal()
@@ -33,3 +34,4 @@ activateCategoriesForm()
 dragging()
 activateTaskForm()
 buildOptions()
+chartByCategoryData()
