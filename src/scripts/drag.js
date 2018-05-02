@@ -1,6 +1,6 @@
 /*eslint no-undef: "off"*/
 //app to handle task dragging
-const Tasks = require("./Tasks")
+const TaskDatabase = require("./Tasks")
 const handleDrop = require("./dropEventHandler")
 
 const dragging = () => {

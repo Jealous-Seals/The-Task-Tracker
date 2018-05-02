@@ -1,5 +1,5 @@
 //import required modules
-const Tasks = require("./Tasks")
+const TaskDatabase = require("./Tasks")
 const createNewTask = require("./taskFactory")
 const createTaskPage = require("./taskPage")
 const createArticlePage = require("./archivePage")
@@ -15,6 +15,8 @@ const categoryDropdown = require("./categoryDropdown")
 const activateTaskForm = require("./submitInfo")
 const buildOptions = require("./categoryDropdown")
 const activateCategoriesForm = require("./createCategoryForm")
+
+TaskDatabase.load()
 
 
 const domElement = document.getElementById("parentElement")

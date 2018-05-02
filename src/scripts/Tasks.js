@@ -1,13 +1,21 @@
-const loadDatabase = () => {
-	if (localStorage.getItem("Tasks") !== null) {
-		const databaseString = localStorage.getItem("Tasks")
-		return JSON.parse(databaseString)
-	} else {
-		return {}
+const TaskDatabase = Object.create({}, {
+	tasks: {
+		value: {},
+		writable: true,
+		enumerable: true
+	},
+	save: {
+		value: function() {
+			localStorage.setItem("Tasks", JSON.stringify(this.tasks))
+		}
+	},
+	load: {
+		value: function() {
+			if (localStorage.getItem("Tasks") !== null) {
+				this.tasks = JSON.parse(localStorage.getItem("Tasks"))
+            }
+		}
 	}
+})
 
-}
-
-const Tasks = loadDatabase()
-
-module.exports = Tasks
+module.exports = TaskDatabase

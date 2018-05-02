@@ -1,4 +1,4 @@
-const Tasks = require("./Tasks")
+const TaskDatabase = require("./Tasks")
 const saveDatabase = require("./databaseSave")
 const timestamp = require("./timestamp")
 const createNewTask = require("./taskFactory")
