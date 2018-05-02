@@ -26,10 +26,6 @@ domElement.appendChild(taskPageVariable)
 const test = require("./test")
 
 
-// test tasks to be used to initialize test database, run code with these once and then comment out the function calls
-createNewTask("Clean", "clean up house", "April 1, 2018", "toDo", "household")
-createNewTask("laundry", "do laundry", "April 1, 2018", "doing", "household")
-createNewTask("feed dog", "feed dog", "April 1, 2018", "done", "household")
 
 createTaskModal()
 activateCategoriesForm()
