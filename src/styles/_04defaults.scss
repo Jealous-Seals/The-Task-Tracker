@@ -160,3 +160,9 @@ img{
 .taskCard {
     border: 1px solid $test-color;
 }
+
+#toDo .hidden--button,
+#doing .hidden--button {
+    display: none;
+}
+

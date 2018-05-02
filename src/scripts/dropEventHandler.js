@@ -14,8 +14,8 @@ const handleDrop = (dropArea, draggedElement) => {
         Tasks[task].status = status
         column.appendChild(card)
         if (status === "done"){
-            const button = archiveCardButton(task, column)
-            card.appendChild(button)
+            const button = document.querySelector(`#${task}--button`)
+            button.classList = ""
         }
         saveDatabase(Tasks)
     } else if (status === "toDo") {
