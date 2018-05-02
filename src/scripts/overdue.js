@@ -1,7 +1,7 @@
 //function to check if an task is overdue or not
 
 //import required modules
-const Task = require("./Tasks")
+const TaskDatabase = require("./Tasks")
 
 const checkIfOverdue = (task) => {
 	const dueDate = Date.parse(task.dueDate)
