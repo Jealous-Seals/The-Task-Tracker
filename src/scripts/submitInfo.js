@@ -4,6 +4,7 @@ const timestamp = require("./timestamp")
 const createNewTask = require("./taskFactory")
 const createTaskPage = require("./taskPage")
 const taskCardFactory = require("./taskCardFactory")
+const activateDrag = require("./drag")
 
 const activateTaskForm = () => {
 
@@ -16,6 +17,7 @@ const activateTaskForm = () => {
         let category = document.getElementById("categorySelect").value
         const newTask = createNewTask(title, description, dueDate, "toDo", category)
         domElement.appendChild(taskCardFactory(newTask))
+        activateDrag()
     })
     return submitButton
 }
