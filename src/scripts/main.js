@@ -15,6 +15,7 @@ const categoryDropdown = require("./categoryDropdown")
 const activateTaskForm = require("./submitInfo")
 const buildOptions = require("./categoryDropdown")
 const activateCategoriesForm = require("./createCategoryForm")
+const goToArchive = require("./eventHandlers")
 
 
 const domElement = document.getElementById("parentElement")
@@ -32,3 +33,4 @@ activateCategoriesForm()
 dragging()
 activateTaskForm()
 buildOptions()
+goToArchive()
