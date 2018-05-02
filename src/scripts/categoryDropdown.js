@@ -3,6 +3,7 @@ const componentFactory = require("./componentFactory")
 
 
 const buildOptions = () => {
+	categories.loadCategories()
 	const categorySelect = document.getElementById("categorySelect")
 	while (categorySelect.firstChild) {
         categorySelect.removeChild(categorySelect.firstChild)

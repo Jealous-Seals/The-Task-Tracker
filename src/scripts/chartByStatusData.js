@@ -1,15 +1,15 @@
-const Tasks = require("./Tasks")
+const TaskDatabase = require("./Tasks")
 
 const chartByStatusData = () => {
     let archived = 0
     let toDo = 0
     let doing = 0
     let done = 0
-    for (let task in Tasks) {
-        if (Tasks[task].archived === true) {
+    for (let task in TaskDatabase.tasks) {
+        if ([TaskDatabase.tasks[task].archived] === true) {
             archived++
         } else {
-            switch (Tasks[task].status) {
+            switch ([TaskDatabase.tasks[task].status]) {
                 case "toDo":
                     toDo++
                     break;
@@ -25,6 +25,7 @@ const chartByStatusData = () => {
         }
     }
     //return array in this order: [0]archived, [1]toDo, [2]doing, [3]done
+    console.log(archived, toDo, doing, done)
     return [archived, toDo, doing, done]
 
 }

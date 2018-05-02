@@ -30,6 +30,7 @@ const test = require("./test")
 const chartByStatusData = require("./chartByStatusData")
 const chartByStatus = require("./chartByStatus")
 const chartByCategoryData = require("./chartByCategoryData")
+const chartByCategory = require("./chartByCategory")
 
 
 createTaskModal()
@@ -38,5 +39,3 @@ dragging()
 activateTaskForm()
 buildOptions()
 goToArchive()
-
-chartByCategoryData()
