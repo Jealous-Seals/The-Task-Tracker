@@ -1,20 +1,10 @@
 //app to create tasks and add them to the tasks database
 
-const Tasks = require("./Tasks")
+const TaskDatabase = require("./Tasks")
 const saveDatabase = require("./databaseSave")
 const timestamp = require("./timestamp")
 const IDCounter = require("./IDObject")
 
-// const idGenerator = function* (startFrom = 0) {
-// 	let newId = 1
-
-// 	while (true) {
-// 		yield startFrom + newId
-// 		newId++
-// 	}
-// }
-
-// const uuidMaker = idGenerator()
 
 
 //factory function to create new tasks when called
@@ -69,8 +59,9 @@ const createNewTask = (title, description, dueDate, status, category) => {
 
 
 	//creates a key in the master database object using the unique id as the key name
-	Tasks[taskUID] = newTask
-	saveDatabase(Tasks)
+	TaskDatabase.tasks[taskUID] = newTask
+    TaskDatabase.save()
+    TaskDatabase.load()
 	return taskUID
 }
 

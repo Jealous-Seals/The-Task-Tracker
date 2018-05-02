@@ -1,26 +1,24 @@
 //function to handle dropping of tasks
-const Tasks = require("./Tasks")
+const TaskDatabase = require("./Tasks")
 const saveDatabase = require("./databaseSave")
 const overdue = require("./overdue")
-const archiveCardButton = require("./archiveCardButton")
 
 const handleDrop = (dropArea, draggedElement) => {
-	const task = draggedElement.draggable.attr("id")
-	const card = draggedElement.draggable[0]
-	const status = dropArea.target.getAttribute("id")
-	const column = dropArea.target
-	overdue(Tasks[task])
-	if (status !== "toDo") {
-		Tasks[task].status = status
-		column.appendChild(card)
-		if (status === "done"){
-			const button = archiveCardButton(task, column)
-			card.appendChild(button)
-		}
-		saveDatabase(Tasks)
-	} else if (status === "toDo") {
-		alert("STOP!!!!!")
-	}
+    const taskID = draggedElement.draggable.attr("id")
+    const card = draggedElement.draggable[0]
+    const newStatus = dropArea.target.getAttribute("id")
+    const column = dropArea.target
+    // overdue(TaskDatabase.tasks.tasks)
+    if (newStatus !== "toDo") {
+        console.log(TaskDatabase.tasks[taskID].status)
+        TaskDatabase.tasks[taskID].status = newStatus
+        console.log(TaskDatabase.tasks[taskID].status)
+        column.appendChild(card)
+        TaskDatabase.save()
+    } else if (newStatus === "toDo") {
+        alert("STOP!!!!!")
+    }
+    TaskDatabase.save()
 }
 
 module.exports = handleDrop

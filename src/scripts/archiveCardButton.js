@@ -1,17 +1,17 @@
-const Tasks = require("./Tasks")
+const TaskDatabase = require("./Tasks")
 const saveDatabase = require("./databaseSave")
 
-const archiveCardButton = (task, parent) => {
+const archiveCardButton = (task) => {
 	const button = document.createElement("button")
+	button.id = `${task}--button`
 	button.setAttribute("type", "submit")
+	button.classList = "hidden--button"
 	button.textContent = "Archive Task"
 	button.addEventListener("click", () => {
-		Tasks[task].archived = true;
-		saveDatabase(Tasks)
-		console.log(task)
+		TaskDatabase.tasks[task].archived = true;
+		TaskDatabase.save()
 		const cardToDelete = document.querySelector(`#${task}`)
-		parent.removeChild(cardToDelete)
-		console.log(Tasks)
+		cardToDelete.parentElement.removeChild(cardToDelete)
 	})
 	return button
 }

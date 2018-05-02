@@ -1,5 +1,5 @@
 const createArticle = require("./createArticle")
-const Tasks = require("./Tasks")
+const TaskDatabase = require("./Tasks")
 const filter = require("./filter")
 const taskCardFactory = require("./taskCardFactory")
 
