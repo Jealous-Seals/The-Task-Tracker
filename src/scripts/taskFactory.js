@@ -4,7 +4,7 @@ const Tasks = require("./Tasks")
 const saveDatabase = require("./databaseSave")
 const timestamp = require("./timestamp")
 
-const idGenerator = function (startFrom = 0) {
+const idGenerator = function* (startFrom = 0) {
 	let newId = 1
 
 	while (true) {

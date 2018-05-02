@@ -24,7 +24,8 @@ domElement.appendChild(taskPageVariable)
 
 //test file can be removed from final version
 const test = require("./test")
-
+const chartByStatus = require("./chartByStatus")
+chartByStatus()
 
 
 createTaskModal()

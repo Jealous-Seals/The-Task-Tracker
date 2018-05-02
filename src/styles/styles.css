@@ -330,9 +330,6 @@ img {
 .border {
   border: 1px solid #D6D6D6; }
 
-:empty {
-  background-color: red; }
-
 .column {
   height: 100%;
   padding-bottom: 5em; }
