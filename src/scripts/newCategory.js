@@ -1,9 +1,10 @@
 const categories = require("./categories")
 
 const newCategory = (input) => {
-	let canAdd = (categories.indexOf(input) <= -1);
+	let canAdd = (categories.categoryOptions.indexOf(input) <= -1);
 	if (canAdd === true) {
-		categories.push(input)
+		categories.categoryOptions.push(input)
+		categories.saveCategories()
 	}
 }
 
