@@ -7,17 +7,17 @@ const taskCardFactory = require("./taskCardFactory")
 
 const activateTaskForm = () => {
 
-    submitButton = document.getElementById("btn--newTask")
-    submitButton.addEventListener("click", () => {
-        const domElement = document.getElementById("toDo")
-        let title = document.getElementById("title").value
-        let description = document.getElementById("description").value
-        let dueDate = document.getElementById("dueDate").value
-        let category = document.getElementById("categorySelect").value
-        const newTask = createNewTask(title, description, dueDate, "toDo", category)
-        domElement.appendChild(taskCardFactory(newTask))
-    })
-    return submitButton
+	const submitButton = document.getElementById("btn--newTask")
+	submitButton.addEventListener("click", () => {
+		const domElement = document.getElementById("toDo")
+		let title = document.getElementById("title").value
+		let description = document.getElementById("description").value
+		let dueDate = document.getElementById("dueDate").value
+		let category = document.getElementById("categorySelect").value
+		const newTask = createNewTask(title, description, dueDate, "toDo", category)
+		domElement.appendChild(taskCardFactory(newTask))
+	})
+	return submitButton
 }
 
 module.exports = activateTaskForm
