@@ -341,7 +341,8 @@ img {
   border: 1px solid red; }
 
 #toDo .hidden--button,
-#doing .hidden--button {
+#doing .hidden--button,
+#archive .hidden--button {
   display: none; }
 
 /*
