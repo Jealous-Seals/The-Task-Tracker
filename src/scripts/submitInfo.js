@@ -11,13 +11,22 @@ const activateTaskForm = () => {
     const submitButton = document.getElementById("btn--newTask")
     submitButton.addEventListener("click", () => {
         const domElement = document.getElementById("toDo")
-        let title = document.getElementById("title").value
-        let description = document.getElementById("description").value
-        let dueDate = document.getElementById("dueDate").value
-        let category = document.getElementById("categorySelect").value
+        const titleInput = document.getElementById("title")
+        const title = titleInput.value
+        const descriptionInput = document.getElementById("description")
+        const description = descriptionInput.value
+        const dueDateInput = document.getElementById("dueDate")
+        const dueDate = dueDateInput.value
+        const categoryInput = document.getElementById("categorySelect")
+        const category = categoryInput.value
         const newTask = createNewTask(title, description, dueDate, "toDo", category)
         domElement.appendChild(taskCardFactory(newTask))
         activateDrag()
+        console.log(titleInput.value)
+        titleInput.value = ""
+        descriptionInput.value= ""
+        dueDateInput.value = ""
+        categoryInput.value = "Category"
     })
     return submitButton
 }

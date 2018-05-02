@@ -154,11 +154,15 @@ img{
 
 .column {
     height: 100%;
-    padding-bottom: 5em;
+    padding: 1em;
+    background-color: $contrast-background;
+    text-align: center;
 }
 
 .taskCard {
     border: 1px solid $test-color;
+    text-align: left;
+    margin-bottom: 1em;
 }
 
 #toDo .hidden--button,

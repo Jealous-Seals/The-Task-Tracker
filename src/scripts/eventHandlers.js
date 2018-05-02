@@ -1,5 +1,6 @@
 const createArchivePage = require("./archivePage")
 const createTaskPage = require("./taskPage")
+const loadTaskPage = require("./taskPageLoad")
 
 const goToArchive = () => {
     var archive = document.getElementById("archiveView");
@@ -12,8 +13,7 @@ const goToArchive = () => {
             archive.id = "taskView"
             archive.textContent = "View Task Page"
         } else {
-            const taskPage = createTaskPage()
-            divElement.appendChild(taskPage)
+            loadTaskPage()
             archive.textContent = "View the Archive"
             archive.id = "archiveView"
         }

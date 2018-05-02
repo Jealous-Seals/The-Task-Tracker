@@ -16,13 +16,11 @@ const activateTaskForm = require("./submitInfo")
 const buildOptions = require("./categoryDropdown")
 const activateCategoriesForm = require("./createCategoryForm")
 const goToArchive = require("./eventHandlers")
+const loadTaskPage = require("./taskPageLoad")
 
-TaskDatabase.load()
 
+loadTaskPage()
 
-const domElement = document.getElementById("parentElement")
-const taskPageVariable = taskPage()
-domElement.appendChild(taskPageVariable)
 
 
 //test file can be removed from final version
@@ -35,7 +33,6 @@ const chartByCategory = require("./chartByCategory")
 
 createTaskModal()
 activateCategoriesForm()
-dragging()
 activateTaskForm()
 buildOptions()
 goToArchive()
