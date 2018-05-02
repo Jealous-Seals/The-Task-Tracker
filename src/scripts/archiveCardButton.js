@@ -11,7 +11,7 @@ const archiveCardButton = (task) => {
 		TaskDatabase.tasks[task].archived = true;
 		TaskDatabase.save()
 		const cardToDelete = document.querySelector(`#${task}`)
-		parent.removeChild(cardToDelete)
+		cardToDelete.removeChild(cardToDelete)
 	})
 	return button
 }
