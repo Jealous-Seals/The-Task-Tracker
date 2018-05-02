@@ -2,7 +2,6 @@
 const TaskDatabase = require("./Tasks")
 const saveDatabase = require("./databaseSave")
 const overdue = require("./overdue")
-const archiveCardButton = require("./archiveCardButton")
 
 const handleDrop = (dropArea, draggedElement) => {
     const taskID = draggedElement.draggable.attr("id")
