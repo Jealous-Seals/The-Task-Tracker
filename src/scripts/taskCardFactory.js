@@ -21,7 +21,7 @@ const taskCardFactory = (task) => {
 	taskSection.appendChild(archiveButton)
 
 
-	if (TaskDatabase.tasks[task].isOverdue === true) {
+	if (TaskDatabase.tasks[task].overdue === true) {
 		const overdue = componentFactory("p", "This task is overdue", "overdue")
 		taskSection.appendChild(overdue)
 	}
