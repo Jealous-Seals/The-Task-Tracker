@@ -366,6 +366,16 @@ canvas {
 .hidden {
   display: none; }
 
+=======
+#done .overdue {
+  display: none; }
+
+#archive .overdue {
+  display: none; }
+
+.overdue {
+  color: red; }
+
 /*
 
 ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄  
