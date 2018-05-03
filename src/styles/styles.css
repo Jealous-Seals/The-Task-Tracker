@@ -280,12 +280,7 @@ img {
   margin: 2rem;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 8px 0 #D6D6D6;
-  transition: 0.3s;
   color: #D6D6D6; }
-
-.taskCard:hover {
-  box-shadow: 0 8px 16px 0 #D6D6D6; }
 
 .cardTitle {
   color: #0D0D0D;
