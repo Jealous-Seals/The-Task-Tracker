@@ -3,8 +3,8 @@ const chartByCategoryNames = require("./chartByCategoryNames")
 const chartByCategoryData = require("./chartByCategoryData")
 
 
-var ctx = document.getElementById("chartByCategory");
-const chartByCategory = new Chart(ctx, {
+const ctx2 = document.getElementById("chartByCategory")
+const chartByCategory = new Chart(ctx2, {
     type: "bar",
     data: {
         labels: chartByCategoryNames(),

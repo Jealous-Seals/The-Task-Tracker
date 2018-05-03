@@ -36,3 +36,5 @@ const chartByStatus = new Chart(chartHook, {
         }
     }
 });
+
+module.exports = chartByStatus

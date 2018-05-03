@@ -7,7 +7,6 @@ const chartByCategoryNames = () => {
     let categoryData = {}
     //create an object with the properties pulled from the categories array
     for (let option in categories.categoryOptions) {
-        console.log(categoryData[categories.categoryOptions[option]])
         categoryData[categories.categoryOptions[option]] = 0
     }
     //create the entry for Uncategorized

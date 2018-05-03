@@ -3,6 +3,7 @@ const categories = require("./categories")
 
 const chartByCategoryData = () => {
     categories.loadCategories()
+    TaskDatabase.load()
     let categoryData = {}
     for (let option in categories.categoryOptions) {
         categoryData[categories.categoryOptions[option]] = 0

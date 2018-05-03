@@ -356,7 +356,15 @@ img {
   display: none; }
 
 .charts {
-  display: inline-block; }
+  display: block;
+  display: flex;
+  flex-flow: row; }
+
+canvas {
+  margin: 0 auto; }
+
+.hidden {
+  display: none; }
 
 /*
 
