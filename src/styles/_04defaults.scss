@@ -206,3 +206,9 @@ canvas {
 .overdue {
     color: red;
 }
+
+#toDo .hidden--returnButton,
+#doing .hidden--returnButton,
+#done .hidden--returnButton {
+    display: none;
+}

@@ -2,6 +2,7 @@ const componentFactory = require("./componentFactory")
 
 const TaskDatabase = require("./Tasks")
 const archiveCardButton = require("./archiveCardButton")
+const returnButtonFunction = require("./returnButton")
 
 
 const taskCardFactory = (task) => {
@@ -11,6 +12,7 @@ const taskCardFactory = (task) => {
 	const description = componentFactory("p", TaskDatabase.tasks[task].description, "taskDescription")
 	const dueDate = componentFactory("p", TaskDatabase.tasks[task].dueDate, "taskDueDate")
 	const archiveButton = archiveCardButton(task)
+	const returnButton = returnButtonFunction(task)
 
 	taskSection.setAttribute("id", task)
 
@@ -19,6 +21,7 @@ const taskCardFactory = (task) => {
 	taskSection.appendChild(description)
 	taskSection.appendChild(dueDate)
 	taskSection.appendChild(archiveButton)
+	taskSection.appendChild(returnButton)
 
 
 	if (TaskDatabase.tasks[task].overdue === true) {
