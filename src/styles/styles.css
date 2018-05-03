@@ -336,6 +336,15 @@ img {
   background-color: #33045E;
   text-align: center; }
 
+#toDo .taskCard {
+  background-color: #8d0808; }
+
+#doing .taskCard {
+  background-color: #81830b; }
+
+#done .taskCard {
+  background-color: #097c18; }
+
 .taskCard {
   border: 1px solid red;
   text-align: left;

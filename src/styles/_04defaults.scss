@@ -159,6 +159,16 @@ img{
     text-align: center;
 }
 
+#toDo .taskCard {
+    background-color: $toDo-color;
+}
+#doing .taskCard {
+    background-color: $doing-color;
+}
+#done .taskCard {
+    background-color: $done-color;
+}
+
 .taskCard {
     border: 1px solid $test-color;
     text-align: left;
