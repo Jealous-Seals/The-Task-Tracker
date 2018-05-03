@@ -8,7 +8,7 @@ const handleDrop = (dropArea, draggedElement) => {
     const card = draggedElement.draggable[0]
     const newStatus = dropArea.target.getAttribute("id")
     const column = dropArea.target
-    overdue(taskID)
+    overdue(TaskDatabase.tasks[taskID])
     if (newStatus !== "toDo") {
         console.log(TaskDatabase.tasks[taskID].status)
         TaskDatabase.tasks[taskID].status = newStatus

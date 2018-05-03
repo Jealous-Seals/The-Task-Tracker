@@ -4,7 +4,7 @@ const TaskDatabase = require("./Tasks")
 const saveDatabase = require("./databaseSave")
 const timestamp = require("./timestamp")
 const IDCounter = require("./IDObject")
-
+const overdue = require("./overdue")
 
 
 //factory function to create new tasks when called
@@ -51,6 +51,10 @@ const createNewTask = (title, description, dueDate, status, category) => {
 			writable: true
 		}
 	})
+
+	//run overdue check
+	overdue(newTask)
+
     //stores the next unique id in a variable
     IDCounter.loadID()
     let taskUID = "_" + IDCounter.currentID
