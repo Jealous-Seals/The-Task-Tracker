@@ -4,14 +4,14 @@
 const TaskDatabase = require("./Tasks")
 
 const checkIfOverdue = (task) => {
-	const taskToCheck = TaskDatabase.tasks[task]
-	const dueDate = Date.parse(taskToCheck.dueDate)
+	const dueDate = Date.parse(task.dueDate)
 	const dateNow = Date.parse(new Date().toString())
-	console.log(dueDate,dateNow)
 	if (dateNow - dueDate > 0) {
-		taskToCheck.overdue = true
+		task.overdue = true
+		return true
 	} else if (dateNow - dueDate < 0) {
-		taskToCheck.overdue = false
+		task.overdue = false
+		return false
 	}
 }
 
