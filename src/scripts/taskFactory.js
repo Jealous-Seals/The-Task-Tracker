@@ -38,7 +38,8 @@ const createNewTask = (title, description, dueDate, status, category) => {
 		},
 		"started": {
 			value: timestamp().toString(), //to be changed, value will come from timestamp function
-			enumerable: true
+			enumerable: true,
+			writable: true
 		},
 		"completed": {
 			value: null,
