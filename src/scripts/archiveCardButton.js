@@ -5,7 +5,7 @@ const archiveCardButton = (task) => {
 	const button = document.createElement("button")
 		button.id = `${task}--button`
 		button.setAttribute("type", "submit")
-		button.classList = "hidden--button"
+		button.classList = "hidden--button btn"
 		button.textContent = "Archive Task"
 		button.addEventListener("click", () => {
 			TaskDatabase.tasks[task].archived = true;

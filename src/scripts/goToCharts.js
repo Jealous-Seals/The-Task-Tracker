@@ -7,7 +7,6 @@ const goToCharts = () => {
     const chartsButton = document.getElementById("chartView")
     chartsButton.addEventListener("click", function(event){
         const chartsDiv = document.getElementsByClassName("charts")
-        console.log(chartsDiv)
         if (chartsButton.id === "chartView") {
             for (let i = 0; i < chartsDiv.length; i++) {
                 chartsDiv[i].classList.toggle("hidden")

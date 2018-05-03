@@ -88,19 +88,14 @@ img{
     max-width: 100%;
 }
 
-.card {
+.taskCard {
     border: solid 1px $base-text-color;
     @include rem-fallback(padding, 2);
     border-radius: 5px;
     @include rem-fallback(margin, 2);
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 8px 0 $base-text-color;
-    transition: 0.3s;
-}
-
-.card:hover {
-    box-shadow: 0 8px 16px 0 $base-text-color;
+    color: $base-background;
 }
 
 .cardTitle {
@@ -114,22 +109,41 @@ img{
 }
 
 .btn {
-    border-radius: 28px;
-    color: $base-text-color;
+    border-radius: 10px;
+    color: $accent-background;
     @include font-size($body-font-size);
     background: $base-background;
     @include rem-fallback(padding, 1, 2);
-    border: solid $base-text-color 5px;
+    border: solid $base-text-color 1px;
     text-decoration: none;
     text-align: center;
     margin: auto;
 }
 
 .btn:hover {
-    background: $base-text-color;
+    background: $accent-background;
     text-decoration: none;
     color: $base-background;
-    border: solid $base-background 5px;
+    border: solid $base-background 1px;
+}
+
+.btn--nav {
+    border-radius: 10px;
+    color: $contrast-text-color;
+    @include font-size($body-font-size);
+    background: $contrast-background;
+    @include rem-fallback(padding, 1, 2);
+    border: solid $contrast-text-color 1px;
+    text-decoration: none;
+    text-align: center;
+    margin: auto;
+}
+
+.btn--nav:hover {
+    background: $contrast-text-color;
+    text-decoration: none;
+    color: $contrast-background;
+    border: solid $contrast-background 1px;
 }
 
 .centered {
@@ -154,25 +168,45 @@ img{
 
 .column {
     height: 100%;
-    padding: 1em;
+    @include rem-fallback(padding, 1);
+    border-radius: 5px;
     background-color: $contrast-background;
     text-align: center;
+    color: $base-background;
 }
 
 #toDo .taskCard {
     background-color: $toDo-color;
 }
+#toDo .overdue {
+    color: $base-background;
+    background: #3A0026;
+    @include rem-fallback(padding, 1);
+    border-radius: 3px;
+    border: 1px solid $base-background;
+}
+
 #doing .taskCard {
     background-color: $doing-color;
+}
+#doing .overdue {
+    color: $base-background;
+    background: #4B4100;
+    @include rem-fallback(padding, 1);
+    border-radius: 3px;
+    border: 1px solid $base-background;
 }
 #done .taskCard {
     background-color: $done-color;
 }
 
 .taskCard {
-    border: 1px solid $test-color;
+    border: 1px solid $base-background;
     text-align: left;
-    margin-bottom: 1em;
+    @include rem-fallback(margin, 1);
+    @include rem-fallback(padding, 1);
+    border-radius: 5px;
+    
 }
 
 #toDo .hidden--button,
@@ -185,10 +219,16 @@ img{
     display: block;
     display: flex;
     flex-flow: row;
+    margin: 0 auto;
 }
 
 canvas {
     margin: 0 auto;
+    border: 3px solid $contrast-background;
+    border-radius: 3px;
+    @include rem-fallback(padding, 1);
+    @include rem-fallback(margin, 1);
+    background: darkgray;
 }
 
 .hidden {
@@ -202,13 +242,30 @@ canvas {
 #archive .overdue {
     display: none;
 }
+#archive {
+    height: 100%;
+    @include rem-fallback(padding, 1);
+    border-radius: 5px;
+    background-color: $contrast-background;
+    text-align: center;
+    color: $base-background;
+}
 
 .overdue {
-    color: red;
+    color: $base-background;
+    background: #3A0026;
+    @include rem-fallback(padding, 1);
+    border-radius: 3px;
+    border: 1px solid $base-background;
 }
 
 #toDo .hidden--returnButton,
 #doing .hidden--returnButton,
 #done .hidden--returnButton {
     display: none;
+}
+nav {
+    @include rem-fallback(margin, 1);
+    @include rem-fallback(padding, 1);
+    
 }

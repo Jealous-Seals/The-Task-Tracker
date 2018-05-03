@@ -5,7 +5,7 @@ const returnButtonFunction = (task) => {
 	const button = document.createElement("button")
 		button.id = `${task}--returnButton`
 		button.setAttribute("type", "submit")
-		button.classList = "hidden--returnButton"
+		button.classList = "hidden--returnButton btn"
 		button.textContent = "Pull from Archive"
 		button.addEventListener("click", () => {
 			TaskDatabase.tasks[task].archived = false;
