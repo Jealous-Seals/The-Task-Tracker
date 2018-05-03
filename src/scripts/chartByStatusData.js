@@ -5,28 +5,27 @@ const chartByStatusData = () => {
     let toDo = 0
     let doing = 0
     let done = 0
+    TaskDatabase.load()
     for (let task in TaskDatabase.tasks) {
-        if ([TaskDatabase.tasks[task].archived] === true) {
+        if (TaskDatabase.tasks[task].archived === true) {
             archived++
         } else {
-            switch ([TaskDatabase.tasks[task].status]) {
+            switch (TaskDatabase.tasks[task].status) {
                 case "toDo":
-                    toDo++
-                    break;
+                toDo++
+                break;
                 case "doing":
-                    doing++
-                    break;
+                doing++
+                break;
                 case "done":
-                    done++
-                    break;
+                done++
+                break;
                 default:
-                    break;
+                break;
             }
         }
     }
     //return array in this order: [0]archived, [1]toDo, [2]doing, [3]done
-    console.log(archived, toDo, doing, done)
     return [archived, toDo, doing, done]
-
 }
 module.exports = chartByStatusData

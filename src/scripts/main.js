@@ -27,6 +27,7 @@ loadTaskPage()
 const test = require("./test")
 const chartByStatusData = require("./chartByStatusData")
 const chartByStatus = require("./chartByStatus")
+const chartByCategoryNames = require("./chartByCategoryNames")
 const chartByCategoryData = require("./chartByCategoryData")
 const chartByCategory = require("./chartByCategory")
 

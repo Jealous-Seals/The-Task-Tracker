@@ -1,9 +1,9 @@
 const Chart = require("chart.js")
-const chartByCategoryNames = require("./chartByCategoryData")
+const chartByCategoryNames = require("./chartByCategoryNames")
 const chartByCategoryData = require("./chartByCategoryData")
 
 
-var ctx = document.getElementById("myChart");
+var ctx = document.getElementById("chartByCategory");
 const chartByCategory = new Chart(ctx, {
     type: "bar",
     data: {
@@ -37,3 +37,5 @@ const chartByCategory = new Chart(ctx, {
         }
     }
 });
+
+module.exports = chartByCategory

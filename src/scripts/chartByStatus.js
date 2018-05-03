@@ -2,8 +2,8 @@ const Chart = require("chart.js")
 const chartByStatusData = require("./chartByStatusData")
 
 
-var ctx = document.getElementById("myChart");
-const chartByStatus = new Chart(ctx, {
+const chartHook = document.getElementById("chartByStatus");
+const chartByStatus = new Chart(chartHook, {
     type: "bar",
     data: {
         labels: ["Archived", "ToDo", "Doing", "Done"],

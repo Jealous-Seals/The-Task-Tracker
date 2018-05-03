@@ -346,6 +346,9 @@ img {
 #archive .hidden--button {
   display: none; }
 
+.charts {
+  display: inline-block; }
+
 /*
 
 ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄  
