@@ -355,6 +355,17 @@ img {
 #archive .hidden--button {
   display: none; }
 
+.charts {
+  display: block;
+  display: flex;
+  flex-flow: row; }
+
+canvas {
+  margin: 0 auto; }
+
+.hidden {
+  display: none; }
+
 #done .overdue {
   display: none; }
 

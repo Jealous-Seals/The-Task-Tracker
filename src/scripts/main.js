@@ -17,6 +17,9 @@ const buildOptions = require("./categoryDropdown")
 const activateCategoriesForm = require("./createCategoryForm")
 const goToArchive = require("./eventHandlers")
 const loadTaskPage = require("./taskPageLoad")
+const goToCharts = require("./goToCharts")
+const chartFactory = require("./chartFactory")
+const chartsPageCreate = require("./chartsPageCreate")
 
 
 loadTaskPage()
@@ -24,7 +27,8 @@ loadTaskPage()
 
 
 //test file can be removed from final version
-const test = require("./test")
+const initialize = require("./test")
+// initialize()
 
 
 
@@ -33,3 +37,10 @@ activateCategoriesForm()
 activateTaskForm()
 buildOptions()
 goToArchive()
+//chart files
+goToCharts()
+const chartByStatusData = require("./chartByStatusData")
+const chartByStatus = require("./chartByStatus")
+const chartByCategoryNames = require("./chartByCategoryNames")
+const chartByCategoryData = require("./chartByCategoryData")
+const chartByCategory = require("./chartByCategory")
