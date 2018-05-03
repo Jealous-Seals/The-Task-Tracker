@@ -24,7 +24,10 @@ loadTaskPage()
 
 
 //test file can be removed from final version
-const test = require("./test")
+const initialize = require("./test")
+// initialize()
+
+//chart files
 const chartByStatusData = require("./chartByStatusData")
 const chartByStatus = require("./chartByStatus")
 const chartByCategoryNames = require("./chartByCategoryNames")

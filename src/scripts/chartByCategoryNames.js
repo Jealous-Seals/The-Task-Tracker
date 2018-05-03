@@ -5,13 +5,17 @@ const chartByCategoryNames = () => {
     categories.loadCategories()
     TaskDatabase.load()
     let categoryData = {}
+    //create an object with the properties pulled from the categories array
     for (let option in categories.categoryOptions) {
         console.log(categoryData[categories.categoryOptions[option]])
         categoryData[categories.categoryOptions[option]] = 0
     }
-    categoryData.Category = 0
+    //create the entry for Uncategorized
+    categoryData.Uncategorized = 0
 
+    //count the number of tasks in each category, updating the object
     for (let task in TaskDatabase.tasks) {
+        //if the category is "Category", update the new "Uncategorized" property
         if (TaskDatabase.tasks[task].category === "Category") {
             categoryData.Uncategorized += 1
         } else {
@@ -19,12 +23,6 @@ const chartByCategoryNames = () => {
         }
     }
     const categoryNameArr = Object.keys(categoryData)
-
-    //need to manually replace the word "Category" with "Uncategorized" for the chart labels
-    const uncategorizedCategory = categoryNameArr.indexOf("Category")
-    if (uncategorizedCategory !== -1) {
-        categoryNameArr[uncategorizedCategory] = "Uncategorized"
-    }
     return categoryNameArr
 }
 
